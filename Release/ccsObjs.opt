@@ -1,0 +1,1 @@
+"./Board.obj" "./WS2812.obj" "./lab1-main.obj" "./PIN/PINCC26XX.obj" "./Startup/ccfg.obj" "../cc26x0f128.cmd" -l"configPkg/linker.cmd" -l"C:/ti/tirtos_simplelink_2_13_00_06/products/cc26xxware_2_21_01_15600/driverlib/bin/ccs/driverlib.lib" -llibc.a 

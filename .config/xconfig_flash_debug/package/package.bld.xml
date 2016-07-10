@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_flash_debug" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/flash_debug_pem3.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/Users/psdco/workspace_v6_1_3/WS2812_Bit_Bang_1/flash_debug.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/flash_debug_pem3.mak" src="package.bld"/>
+        <srcFile name="package/cfg/flash_debug_pem3.oem3.dep" src="package/cfg/flash_debug_pem3.c"/>
+        <srcFile name="package/cfg/flash_debug_pem3.dep" src="package/cfg/flash_debug_pem3.cfg"/>
+        <srcFile name="package/cfg/flash_debug.xem3.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_flash_debug.tar.dep" src="package/rel/xconfig_flash_debug.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.arm.elf.M3"
+            version="ti.targets.arm.elf.M3{1,0,15.12,1"
+            rawVersion="15.12.1"
+            platform="ti.platforms.simCM3"
+            isa="v7M"
+            suffix="em3"
+            rootDir="C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS"
+            os="undefined"
+            rts="ti.targets.arm.rtsarm">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="flash_debug"
+        pname="flash_debug.pem3"
+        target="ti.targets.arm.elf.M3"
+        platform="ti.platforms.simplelink:CC2650F128"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/flash_debug_pem3.cfg"
+        xCfgPrefix="package/cfg/flash_debug_pem3"
+        cfgScript="C:/Users/psdco/workspace_v6_1_3/WS2812_Bit_Bang_1/flash_debug.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="flash_debug"
+        pname="flash_debug.xem3"
+        target="ti.targets.arm.elf.M3"
+        platform="ti.platforms.simplelink:CC2650F128"
+        profile="release"
+        xCfgScript="package/cfg/flash_debug_pem3.cfg"
+        xCfgPrefix="package/cfg/flash_debug_pem3"
+        cfgScript="C:/Users/psdco/workspace_v6_1_3/WS2812_Bit_Bang_1/flash_debug.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="flash_debug.xem3"
+        args=""
+        groupName="flash_debug.xem3"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_flash_debug"
+        pname="xconfig_flash_debug.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
